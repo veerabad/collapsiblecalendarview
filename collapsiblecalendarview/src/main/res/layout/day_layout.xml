@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_day"
+        android:layout_width="@dimen/day_circle_width"
+        android:layout_height="@dimen/day_circle_height"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:paddingBottom="6dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_event_tag"
+            android:layout_width="18dp"
+            android:layout_height="16dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:srcCompat="@drawable/dot_icon" />
+
+    </LinearLayout>
+
+</LinearLayout>

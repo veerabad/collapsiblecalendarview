@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layout_btn_group_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_prev_month"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="2dp"
+                android:foreground="?actionBarItemBackground"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/left_arrow_icon" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_next_month"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="2dp"
+                android:foreground="?actionBarItemBackground"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/right_arrow_icon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_btn_group_week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_prev_week"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="2dp"
+                android:foreground="?actionBarItemBackground"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/left_arrow_icon" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_next_week"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="2dp"
+                android:foreground="?actionBarItemBackground"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/right_arrow_icon" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/cl_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginRight="38dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Jun 2015" />
+
+            <com.collapsiblecalendar.view.ExpandIconView
+                android:id="@+id/expandIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:foreground="?actionBarItemBackground"
+                android:visibility="visible"
+                app:animationDuration="300"
+                app:color="#000"
+                app:colorIntermediate="@android:color/black"
+                app:colorLess="@android:color/black"
+                app:colorMore="@android:color/black"
+                app:roundedCorners="true"
+                app:switchColor="true" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/today_icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:clickable="true"
+                android:foreground="?actionBarItemBackground"
+                android:padding="6dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/today_calendar_icon" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <TableLayout
+        android:id="@+id/table_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TableLayout>
+
+    <com.collapsiblecalendar.view.LockScrollView
+        android:id="@+id/scroll_view_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:id="@+id/table_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true">
+
+        </TableLayout>
+
+    </com.collapsiblecalendar.view.LockScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shrikanthravi.collapsiblecalendarview.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.collapsiblecalendar.widget.CollapsibleCalendarView
+            android:id="@+id/collapsibleCalendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:buttonLeft_drawableTintColor="@color/colorPrimaryDark"
+            app:buttonRight_drawableTintColor="@color/colorPrimaryDark"
+            app:eventColor="@color/google_red"
+            app:expandIconColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:primaryColor="@color/google_red"
+            app:selectedItem_background="@drawable/circle_solid_background"
+            app:selectedItem_textColor="@android:color/white"
+            app:textColor="@android:color/black"
+            app:todayItem_background="@drawable/circle_stroke_background"
+            app:todayItem_textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/collapsibleCalendarView"
+            tools:text="hi" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
